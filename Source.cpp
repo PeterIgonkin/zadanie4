@@ -55,6 +55,16 @@ void third() {
     }
     cout << r;
 }
+void print_array(int mas[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << "Введите значение № " << i + 1 << endl;
+        cin >> mas[i];
+        cout << "\n";
+    }
+    for (int i = 0; i < size; i++) {
+        cout << mas[i] << " ";
+    }
+}
 int main() {
     setlocale(LC_ALL, "ru");
     srand(time(NULL));
@@ -64,5 +74,9 @@ int main() {
     cout << "\n";
     third();
     cout << "\n";
+    int n;
+    cin >> n;
+    int *mas = new int[n];
+    print_array(mas, n);
     return 0;
 }
